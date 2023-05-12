@@ -38,7 +38,7 @@ body {
 .result-content .result{
     width: 50%;
     height: 100%;
-    background-color: hsl(256, 87%, 53%);
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
     border: 15px;
     display: flex;
     align-items: center;
@@ -64,7 +64,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgba(61, 34, 138, 0.438);
+    background: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
   
 
 }
@@ -114,7 +114,7 @@ body {
     align-items: center;
     gap:10px;
     font-weight: bold;
-    color: hsla(0, 100%, 67%, 0.76);
+    color: hsl(0, 100%, 67%);
 }
 
 
