@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="result-container">
+        <div class="result-content">
+            <div class="result">
+                <h3>You result</h3>
+                <div class="score">
+                    <h1 id="score-display">76</h1>
+                    <p>of 100</p>
+                </div>
+                <h2 id="opinion">Great</h2>
+                <p id="result-test">You scored higher than 65% of<br/> the people who have taken<br/>  these tests </p>
+            </div>
+            <div class="summary">
+                <h3>Summary</h3>
+                <div class="summary-content">
+                    <div class="input-container">
+                        <div class="input-style">
+                            <img src="/assets/images/icon-reaction.svg" alt="">
+                            <p>Reaction</p>
+                        </div>
+                            <div class="input-con">
+                                <input id="Reaction-input" type="text" name="" id="" value="80"><p>/100</p>
+                            </div>
+                            
+                    </div>
+                    <div class="input-container">
+                        <div class="input-style">
+                            <img src="/assets/images/icon-memory.svg" alt="">
+                            <p id="Memory-text">Memory</p>
+                        </div>
+                            <div class="input-con">
+                                <input id="Memory-input" type="text" name="" id="" value="92"><p>/100</p>
+                            </div>
+                            
+                    </div>
+                    <div class="input-container" id="verbal">
+                        <div class="input-style">
+                            <img src="/assets/images/icon-verbal.svg" alt="">
+                            <p id="Verbal-text">Verbal</p>
+                        </div>
+                            <div class="input-con">
+                                <input id="Verbal-input"  type="text" name="" id="" value="61"><p>/100</p>
+                            </div>
+                            
+                    </div>
+                    <div class="input-container" id="Visual">
+                        <div class="input-style">
+                            <img src="/assets/images/icon-visual.svg" alt="">
+                            <p  id="Visual-text">Visual</p>
+                        </div>
+                            <div class="input-con">
+                                <input id="Visual-input" type="text" name="" id="" value="72"><p>/100</p>
+                            </div>
+                            
+                    </div>
+                </div>
+                <button onclick="result()">Continue</button>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        const memory=document.getElementById('Reaction-input')
+        const reaction=document.getElementById('Memory-input')
+        const verbal=document.getElementById('Verbal-input')
+        const visual=document.getElementById('Visual-input')
+        
+        const score_display=document.getElementById('score-display')
+        const result_test=document.getElementById('result-test')
+        const opinion=document.getElementById('opinion')
+        const result=()=>{
+            var num = ((parseInt(memory.value)/100)+(parseInt(reaction.value)/100)+(parseInt(visual.value)/100)+(parseInt(verbal.value))/100)/4
+            var roundedNum = num.toFixed(2)*100;
+            score_display.innerHTML=parseInt(roundedNum)
+            if (roundedNum>65){
+                result_test.innerHTML="scored higher than 65% of<br/> the people who have taken<br/>  these tests"
+                opinion.innerHTML="Great"
+            }else{
+                result_test.innerHTML="scored lower than 65% of<br/> the people who have taken<br/>  these tests"
+                opinion.innerHTML="Try again"
+            }
+        }
+    </script>
+</body>
+</html>

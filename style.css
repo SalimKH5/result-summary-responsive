@@ -1,0 +1,224 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+
+
+@font-face {
+    font-family: HankenGrotesk; /* You can choose any name for your font */
+    src: url('assets\fonts\static\HankenGrotesk-Bold.ttf'); /* Replace 'path/to' with the actual path to your font file */
+}
+
+body {
+    font-family: HankenGrotesk, sans-serif; /* Use the same font-family name that you declared in @font-face */
+}
+
+.result-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-content{
+    max-width: 600px;
+    width: 100%;
+    height: 24rem;
+    border-radius: 25px;
+    box-shadow: 0 0  5px 0px rgba(0,0,0,0.5);
+    display: flex;
+    margin: 0 auto;
+    
+ 
+}
+
+
+.result-content .result{
+    width: 50%;
+    height: 100%;
+    background-color: hsl(256, 87%, 53%);
+    border: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1.5rem;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 25px;
+    color:hsla(0, 0%, 100%, 0.664)
+}
+
+
+
+
+
+
+.result .score{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0  15px 0px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(61, 34, 138, 0.438);
+  
+
+}
+ .score h1{
+    font-size: 30px;
+}
+
+
+.result .score p{
+    font-size: 10px;
+}
+
+
+.result p{
+    font-size: 10px;
+    color:rgba(209, 208, 208, 0.8)
+}
+
+
+
+.result-content .summary{
+    width: 50%;
+    height: 100%;
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+    color:hsla(0, 0%, 0%, 0.637)
+}
+
+.summary .summary-content{
+    width: 100%;  
+}
+
+.summary .summary-content .input-container{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 1rem 0;
+    border-radius: 5px;
+    box-shadow: 0 0  5px 0px rgba(0, 0, 0, 0.178);
+    padding:8px 5px;
+    background-color: hsla(0, 100%, 67%, 0.096);
+}
+
+.summary .summary-content .input-container .input-style{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    font-weight: bold;
+    color: hsla(0, 100%, 67%, 0.76);
+}
+
+
+
+#Memory-text{
+    color:hsl(39, 100%, 56%);
+}
+
+#Verbal-text{
+    color:hsl(166, 100%, 37%);
+}
+
+#Visual-text{
+    color:hsl(234, 85%, 45%);
+}
+
+
+.summary .summary-content .input-container .input-con {
+    display: flex;
+    align-items: center;
+}
+
+.summary .summary-content .input-container .input-con input{
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+}
+
+
+.summary button{
+    margin: 40px 0;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px 5px;
+    border-radius: 25px;
+    color: #fff;
+    background: hsl(224, 30%, 27%);
+    border: none;
+    cursor: pointer;
+}
+
+
+.summary button:hover{
+    background: hsl(256, 87%, 53%);
+}
+
+#verbal{
+    background: hsla(166, 100%, 37%, 0.185);
+}
+
+#Visual{
+    background: hsla(234, 85%, 45%, 0.178);
+}
+
+
+
+@media screen and (max-width:761px){
+    .result-content{
+        max-width: 500px;
+       
+    }
+}
+
+@media screen and (max-width:577px){
+    .result-content{
+        max-width: 350px;
+       
+    }
+}
+
+@media screen and (max-width:450px) {
+    
+
+    .result-content{
+        min-width: 200px;
+        max-width: none;
+        height: 100vh;
+        box-shadow: none;
+        flex-direction: column;
+        
+    }
+
+    
+    .result-content .result{
+        min-width: 300px;
+        width: 98%;
+        height: 50%;
+        border-radius: 0;
+        border-bottom-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+        padding:2rem 0;
+    }
+
+    .result-content .summary{
+        margin-top: 0.5rem;
+        margin-left: 1.5rem;
+        width: 100%;
+    }
+
+    
+
+    
+}
